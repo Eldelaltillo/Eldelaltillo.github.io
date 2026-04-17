@@ -2,13 +2,69 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Portafolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduardo | Portafolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Hola mundo 👋</h1>
-  <p>Este es mi primer portafolio web</p>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Eduardo</h1>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hola, soy Eduardo 👋</h2>
+      <h3>Desarrollador Web</h3>
+      <p>Construyo aplicaciones web con JavaScript y SQL</p>
+      <a href="#projects" class="btn">Ver proyectos</a>
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section id="about" class="about">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy desarrollador web en formación, enfocado en crear aplicaciones modernas
+      y funcionales. Me gusta aprender nuevas tecnologías y resolver problemas reales.
+    </p>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="projects" class="projects">
+    <h2>Proyectos</h2>
+
+    <div class="project-card">
+      <h3>Proyecto 1</h3>
+      <p>Descripción breve del proyecto.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Proyecto 2</h3>
+      <p>Descripción breve del proyecto.</p>
+    </div>
+
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <p>Email: tuemail@gmail.com</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Eduardo - Todos los derechos reservados</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
