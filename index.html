@@ -5,60 +5,310 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eduardo | Portafolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Íconos de FontAwesome & Devicon para los logos de tecnologías -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
-      <h1 class="logo">Eduardo</h1>
+      <h1 class="logo">Eduardo Villarreal</h1>
       <ul class="nav-links">
         <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Skills & Tools</a></li>
         <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#education">Formación</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
+      <!-- BOTÓN MODO OSCURO / CLARO -->
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO / PRESENTACIÓN PRINCIPAL -->
   <section class="hero">
+    <!-- Imagen de fondo que se desvanece con el scroll -->
+    <div class="hero-bg" style="background-image: url('images/Eduardo.jpg');"></div>
+    <div class="hero-overlay"></div>
+
     <div class="hero-content">
-      <h2>Hola, soy Eduardo 👋</h2>
-      <h3>Desarrollador Web</h3>
-      <p>Construyo aplicaciones web con JavaScript y SQL</p>
-      <a href="#projects" class="btn">Ver proyectos</a>
+      <!-- FOTO DE PERFIL CENTRADA -->
+      <div class="hero-profile-container">
+        <img src="images/Eduardo.jpg" alt="Eduardo" class="hero-profile-img">
+      </div>
+
+      <h2>Eduardo Villarreal</h2>
+      <h3>Desarrollador Full-Stack & Creador de Software</h3>
+      
+      <!-- Badges de información rápida -->
+      <div class="hero-info-badges">
+        <span><i class="fa-solid fa-location-dot"></i> Medellin, Colombia</span>
+        <span><i class="fa-solid fa-envelope"></i> edward_villa_9860@hotmail.com</span>
+      </div>
+
+      <p class="hero-bio">
+        Construyo aplicaciones web robustas (Java, Spring Boot, Angular), soluciones móviles/VR y automatizaciones en Python enfocadas en resolver problemas reales.
+      </p>
+
+<!-- Botones de acción -->
+      <div class="action-buttons">
+        <!-- Botón Descargar CV -->
+        <a href="docs/CV_Eduardo.pdf" download="CV_Eduardo.pdf" class="btn btn-primary">
+          <i class="fa-solid fa-file-arrow-down"></i> Descargar CV
+        </a>
+
+        <!-- Botón GitHub -->
+        <a href="https://github.com/Eldelaltillo" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+
+        <!-- Botón LinkedIn -->
+        <a href="https://www.linkedin.com/in/eduardo-villarreal-8311711b5/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- SOBRE MI -->
+  <!-- SOBRE MÍ -->
   <section id="about" class="about">
     <h2>Sobre mí</h2>
     <p>
-      Soy desarrollador web en formación, enfocado en crear aplicaciones modernas
-      y funcionales. Me gusta aprender nuevas tecnologías y resolver problemas reales.
+      ¡Hola! Soy Eduardo 👋 <br><br>
+      Soy Tecnólogo en Desarrollo de Software. Mi enfoque no está en acumular títulos, sino en construir soluciones reales. Aunque estoy buscando mi primera oportunidad en el entorno corporativo, he dedicado mi tiempo a diseñar, programar y desplegar software bajo estándares profesionales.<br><br>
+      No me limito a seguir tutoriales; me apasiona resolver problemas reales mediante el código. Mi stack tecnológico y mis focos de práctica son:<br><br>
+      <strong>Desarrollo Full-Stack:</strong> Construyo la lógica de negocio y APIs robustas con Java y Spring Boot, conectándolas con interfaces dinámicas y escalables en Angular y JavaScript.<br><br>
+      <strong>Entornos Interactivos y Móviles:</strong> Creo aplicaciones móviles nativas utilizando Android Studio y diseño mecánicas y físicas de juego en Unity usando C#.<br><br>
+      ¿Por qué trabajar conmigo? Porque sé trabajar de forma autónoma. Mis proyectos de desarrollo propio reflejan mi capacidad para investigar documentación técnica, resolver bugs complejos por mi cuenta y estructurar código limpio y mantenible. Estoy listo para trasladar esta disciplina y capacidad de autoaprendizaje a tu equipo de desarrollo.
     </p>
+  </section>
+
+<!-- SKILLS & TOOLS -->
+  <section id="skills" class="skills">
+    <h2>Skills & Tools</h2>
+    <p class="section-subtitle">Tecnologías y herramientas con las que construyo soluciones de software.</p>
+
+    <div class="skills-grid">
+      
+      <!-- Categoría 1: Backend -->
+      <div class="skill-category">
+        <div class="category-banner">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&q=80" alt="Backend & BD">
+        </div>
+        <div class="category-body">
+          <h3>Backend & BD</h3>
+          <div class="skills-list">
+            <span class="skill-tag"><i class="devicon-java-plain colored"></i> Java</span>
+            <span class="skill-tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+            <span class="skill-tag"><i class="devicon-mysql-plain colored"></i> SQL</span>
+            <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoría 2: Frontend -->
+      <div class="skill-category">
+        <div class="category-banner">
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&q=80" alt="Frontend Web">
+        </div>
+        <div class="category-body">
+          <h3>Frontend Web</h3>
+          <div class="skills-list">
+            <span class="skill-tag"><i class="devicon-angularjs-plain colored"></i> Angular</span>
+            <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5 / CSS3</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoría 3: Móvil & VR -->
+      <div class="skill-category">
+        <div class="category-banner">
+          <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=500&q=80" alt="Móvil & VR">
+        </div>
+        <div class="category-body">
+          <h3>Móvil & VR</h3>
+          <div class="skills-list">
+            <span class="skill-tag"><i class="devicon-android-plain colored"></i> Android Studio</span>
+            <span class="skill-tag"><i class="devicon-unity-original colored"></i> Unity</span>
+            <span class="skill-tag"><i class="devicon-csharp-plain colored"></i> C#</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoría 4: Automatización -->
+      <div class="skill-category">
+        <div class="category-banner">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&q=80" alt="Automatización">
+        </div>
+        <div class="category-body">
+          <h3>Automatización & Tools</h3>
+          <div class="skills-list">
+            <span class="skill-tag"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- PROYECTOS -->
   <section id="projects" class="projects">
-    <h2>Proyectos</h2>
+    <h2>Mis Proyectos</h2>
+    <p class="section-subtitle">Una selección de mis trabajos más recientes en desarrollo web, móvil y automatización.</p>
 
-    <div class="project-card">
-      <h3>Proyecto 1</h3>
-      <p>Descripción breve del proyecto.</p>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&q=80" alt="MetaPOO VR">
+        </div>
+        <div class="project-body">
+          <h3>MetaPOO</h3>
+          <p>Aplicación de realidad virtual de enseñanza de programación orientada a objetos con soporte de lengua de señas.</p>
+          <div class="tech-stack">
+            <span>Unity</span>
+            <span>C#</span>
+          </div>
+          <a href="#projects" class="btn btn-sm">Más información</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Registro Comidas">
+        </div>
+        <div class="project-body">
+          <h3>Registro de Comidas Colegio</h3>
+          <p>Aplicación Web para un colegio, diseñada para registrar las comidas de cada estudiante de manera rápida mediante códigos QR.</p>
+          <div class="tech-stack">
+            <span>Angular</span>
+            <span>Spring Boot</span>
+          </div>
+          <a href="#projects" class="btn btn-sm">Más información</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=600&q=80" alt="CyberTech Emporium">
+        </div>
+        <div class="project-body">
+          <h3>CyberTech Emporium</h3>
+          <p>Aplicación móvil nativa para una tienda de tecnología con secciones de favoritos, carrito, notificaciones y gestión de cuenta.</p>
+          <div class="tech-stack">
+            <span>Android Studio</span>
+            <span>Java</span>
+          </div>
+          <a href="#projects" class="btn btn-sm">Más información</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1614680376593-902f749f7fdc?w=600&q=80" alt="Gestor Spotify">
+        </div>
+        <div class="project-body">
+          <h3>Gestor de Listas Spotify</h3>
+          <p>Script automatizado que analiza el Top 50, genera una playlist personalizada y remueve canciones según tus hábitos de reproducción.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Spotify API</span>
+          </div>
+          <a href="#projects" class="btn btn-sm">Más información</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80" alt="Organizador Media">
+        </div>
+        <div class="project-body">
+          <h3>Organizador de Media Inteligente</h3>
+          <p>Script encargado de escanear y organizar automáticamente fotos y videos en carpetas lógicas clasificadas por año y mes.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+          </div>
+          <a href="#projects" class="btn btn-sm">Más información</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&q=80" alt="Renombrador Metadata">
+        </div>
+        <div class="project-body">
+          <h3>Renombrador por Metadata</h3>
+          <p>Herramienta en Python que extrae la fecha exacta de captura/creación desde los metadatos de archivos multimedia para renombrarlos en lote.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+          </div>
+          <a href="#projects" class="btn btn-sm">Más información</a>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <div class="project-card">
-      <h3>Proyecto 2</h3>
-      <p>Descripción breve del proyecto.</p>
+  <!-- FORMACIÓN -->
+  <section id="education" class="education">
+    <h2>Formación</h2>
+    <p class="section-subtitle">Estudios académicos, titulaciones y cursos realizados.</p>
+
+    <div class="education-grid">
+      <div class="education-card">
+        <div class="education-header">
+          <h3>Tecnología en Desarrollo de Software</h3>
+          <span class="education-date">2022 - 2025</span>
+        </div>
+        <h4>Universitaria Agustiana</h4>
+        <p>Grado como estudiante destacado por mejor promedio</p>
+      </div>
+
+      <div class="education-card">
+        <div class="education-header">
+          <h3>Curso Ingles B2+</h3>
+          <span class="education-date">2017</span>
+        </div>
+        <h4>American School Way</h4>
+        <p>Ingles Americano B2+</p>
+      </div>
     </div>
-
   </section>
 
   <!-- CONTACTO -->
   <section id="contact" class="contact">
     <h2>Contacto</h2>
-    <p>Email: tuemail@gmail.com</p>
+    <p class="section-subtitle">¿Tienes alguna pregunta o propuesta? Escríbeme y me pondré en contacto contigo.</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Asunto</label>
+        <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-submit">Enviar Mensaje</button>
+    </form>
   </section>
 
   <!-- FOOTER -->
