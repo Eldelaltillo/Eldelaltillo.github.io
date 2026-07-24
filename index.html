@@ -11,22 +11,32 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+<!-- HEADER / NAVBAR -->
   <header>
-    <nav class="navbar">
-      <h1 class="logo">Eduardo Villarreal</h1>
-      <ul class="nav-links">
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#skills">Skills & Tools</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#education">Formación</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-      <!-- BOTÓN MODO OSCURO / CLARO -->
-      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
-        <i class="fa-solid fa-moon"></i>
-      </button>
-    </nav>
+    <div class="navbar">
+      <div class="logo">Eduardo Villarreal</div>
+      
+      <!-- Contenedor de enlaces -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#skills">Skills & Tools</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#education">Formación</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botones de la barra: Tema y Menú Hamburguesa -->
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
   </header>
 
   <!-- HERO / PRESENTACIÓN PRINCIPAL -->

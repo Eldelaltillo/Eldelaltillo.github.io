@@ -92,3 +92,36 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("scroll", revealOnScroll);
+
+// MENÚ HAMBURGUESA EN MÓVIL
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const menuIcon = menuToggle ? menuToggle.querySelector("i") : null;
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+
+    // Cambia el icono entre hamburguesa (bars) y la "X" (xmark)
+    if (menuIcon) {
+      if (navLinks.classList.contains("active")) {
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+      } else {
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+      }
+    }
+  });
+
+  // Cerrar el menú automáticamente al hacer clic en un enlace
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      if (menuIcon) {
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+      }
+    });
+  });
+}
