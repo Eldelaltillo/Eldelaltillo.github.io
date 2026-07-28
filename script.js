@@ -125,3 +125,76 @@ if (menuToggle && navLinks) {
     });
   });
 }
+
+// LÓGICA DE CARRUSEL EN TARJETAS DE PROYECTOS
+document.querySelectorAll('.project-card').forEach(card => {
+  const images = card.querySelectorAll('.carousel-track img');
+  const prevBtn = card.querySelector('.carousel-btn.prev');
+  const nextBtn = card.querySelector('.carousel-btn.next');
+  
+  if (images.length <= 1) {
+    if (prevBtn) prevBtn.style.display = 'none';
+    if (nextBtn) nextBtn.style.display = 'none';
+    return;
+  }
+
+  let currentIndex = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.toggle('active', i === index);
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+      showImage(currentIndex);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+      showImage(currentIndex);
+    });
+  }
+});
+
+// MODAL PARA AMPLIAR IMÁGENES DE PROYECTOS
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const captionText = document.getElementById("modalCaption");
+const modalClose = document.getElementById("modalClose");
+
+if (modal && modalImg && modalClose) {
+  // Abrir modal al hacer clic en cualquier imagen del carrusel
+  document.querySelectorAll(".carousel-track img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      captionText.textContent = img.alt || "Vista previa del proyecto";
+    });
+  });
+
+  // Cerrar modal al hacer clic en la "X"
+  modalClose.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Cerrar modal al hacer clic fuera de la imagen (en el fondo oscuro)
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Cerrar modal con la tecla Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.style.display === "block") {
+      modal.style.display = "none";
+    }
+  });
+}
